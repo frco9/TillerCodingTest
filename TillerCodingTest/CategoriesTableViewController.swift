@@ -61,5 +61,17 @@ class CategoriesTableViewController: UITableViewController {
         return cell
     }
 
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        self.performSegueWithIdentifier("productsSegue", sender: self)
+    }
 
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "productsSegue" {
+            if let destination = segue.destinationViewController as? ProductsTableViewController {
+                if let categoryIndex = tableView.indexPathForSelectedRow()?.row {
+                    destination.products += categories[categoryIndex].products
+                }
+            }
+        }
+    }
 }
