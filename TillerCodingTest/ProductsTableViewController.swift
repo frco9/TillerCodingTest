@@ -10,16 +10,20 @@ import UIKit
 
 class ProductsTableViewController: UITableViewController {
 
-    var products: [Product] = []
+    var products: [Product] = [] {
+        didSet {
+            dispatch_async(dispatch_get_main_queue(),{
+                self.tableView.reloadData()
+            });
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        // Sort products according to their position field
+        products.sort { $0.position < $1.position }
+        
+        tableView.registerNib(UINib(nibName: "ProductTableViewCell", bundle: nil), forCellReuseIdentifier: "productCell")
     }
 
     override func didReceiveMemoryWarning() {
@@ -37,11 +41,14 @@ class ProductsTableViewController: UITableViewController {
     }
 
 
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("productCell", forIndexPath: indexPath) as! UITableViewCell
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> ProductTableViewCell {
+        let identifier = "productCell"
+        var cell: ProductTableViewCell! = tableView.dequeueReusableCellWithIdentifier(identifier, forIndexPath: indexPath) as! ProductTableViewCell
+
         
         let product = products[indexPath.row]
-        cell.textLabel!.text = product.name
+        cell.productTitle.text = product.name ?? "[No Name]"
+        cell.productPrice.text = String(product.price) ?? "[No Price]"
         
         return cell
     }

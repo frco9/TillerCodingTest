@@ -19,6 +19,8 @@
 		1E4E6FDD1B73B09D00169A80 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4E6FD71B73B09D00169A80 /* Product.swift */; };
 		1E4E6FDE1B73B09D00169A80 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4E6FD81B73B09D00169A80 /* SwiftyJSON.swift */; };
 		1E4E6FE31B73D01900169A80 /* ProductsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4E6FE21B73D01900169A80 /* ProductsTableViewController.swift */; };
+		1E4E6FE61B73D4E200169A80 /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4E6FE41B73D4E200169A80 /* ProductTableViewCell.swift */; };
+		1E4E6FE71B73D4E200169A80 /* ProductTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E4E6FE51B73D4E200169A80 /* ProductTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,8 @@
 		1E4E6FD71B73B09D00169A80 /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		1E4E6FD81B73B09D00169A80 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		1E4E6FE21B73D01900169A80 /* ProductsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductsTableViewController.swift; sourceTree = "<group>"; };
+		1E4E6FE41B73D4E200169A80 /* ProductTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
+		1E4E6FE51B73D4E200169A80 /* ProductTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProductTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +99,8 @@
 				1E4E6FD41B73B09D00169A80 /* CategoriesTableViewController.swift */,
 				1E4E6FB31B73AFFA00169A80 /* AppDelegate.swift */,
 				1E4E6FE21B73D01900169A80 /* ProductsTableViewController.swift */,
+				1E4E6FE41B73D4E200169A80 /* ProductTableViewCell.swift */,
+				1E4E6FE51B73D4E200169A80 /* ProductTableViewCell.xib */,
 				1E4E6FB71B73AFFA00169A80 /* Main.storyboard */,
 				1E4E6FBA1B73AFFA00169A80 /* Images.xcassets */,
 				1E4E6FBC1B73AFFA00169A80 /* LaunchScreen.xib */,
@@ -235,6 +241,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1E4E6FB91B73AFFA00169A80 /* Main.storyboard in Resources */,
+				1E4E6FE71B73D4E200169A80 /* ProductTableViewCell.xib in Resources */,
 				1E4E6FBE1B73AFFA00169A80 /* LaunchScreen.xib in Resources */,
 				1E4E6FBB1B73AFFA00169A80 /* Images.xcassets in Resources */,
 			);
@@ -256,6 +263,7 @@
 			files = (
 				1E4E6FDA1B73B09D00169A80 /* CategoriesTableViewController.swift in Sources */,
 				1E4E6FDC1B73B09D00169A80 /* JSONService.swift in Sources */,
+				1E4E6FE61B73D4E200169A80 /* ProductTableViewCell.swift in Sources */,
 				1E4E6FB41B73AFFA00169A80 /* AppDelegate.swift in Sources */,
 				1E4E6FD91B73B09D00169A80 /* CategoriesModelBuilder.swift in Sources */,
 				1E4E6FDB1B73B09D00169A80 /* Category.swift in Sources */,
